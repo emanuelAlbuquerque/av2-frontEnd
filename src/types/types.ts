@@ -4,6 +4,13 @@ type ItemLista = {
   concluida: boolean
 }
 
+type CadastroType = {
+  nome: string
+  email: string
+  senha: string
+}
+
 export type {
-  ItemLista
+  ItemLista,
+  CadastroType
 }
