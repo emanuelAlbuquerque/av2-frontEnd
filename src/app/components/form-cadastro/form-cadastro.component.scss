@@ -1,0 +1,13 @@
+.container {
+  padding: 1rem;
+}
+
+.form {
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+}

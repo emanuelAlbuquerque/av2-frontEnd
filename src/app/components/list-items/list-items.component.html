@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Exercício 02 e 03</h1>
+  <div>
+    <ul>
+      <li *ngFor="let item of listItems" [ngStyle]="{'background': item.concluida && 'yellow'}">
+        <p>{{ item.nome }}</p>
+        <div>
+          <button class="button-icon" (click)="concluirItem(item.id)">
+            <mat-icon>done</mat-icon>
+          </button>
+          <button class="button-icon" (click)="removerItem(item.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </li>
+    </ul>
+    <form [formGroup]="form" class="container_input">
+      <input id="nome" type="text" formControlName="nome" placeholder="Nome: " maxlength="100">
+      <button (click)="adicionarItem()">Adicionar</button>
+    </form>
+  </div>
+</div>

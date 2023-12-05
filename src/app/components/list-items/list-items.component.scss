@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      list-style: circle;
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  }
+
+  .button-icon {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .container_input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    button {
+      cursor: pointer;
+    }
+  }
+}
