@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
 import { Observable } from 'rxjs'
+import { DadoAlunoType } from 'src/types/types'
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class DadosAlunosService {
 
   constructor(private httpClient: HttpClient) { }
 
-  listarDadosEstudantes(): Observable<any[]> {
-    return this.httpClient.get<any[]>(this.url)
+  listarDadosEstudantes(): Observable<DadoAlunoType[]> {
+    return this.httpClient.get<DadoAlunoType[]>(this.url)
   }
 }

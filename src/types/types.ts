@@ -10,7 +10,16 @@ type CadastroType = {
   senha: string
 }
 
+type DadoAlunoType = {
+  matricula: number
+  nome: string
+  idade: number
+  curso: string
+  rendimentoEscolar: Object
+}
+
 export type {
   ItemLista,
-  CadastroType
+  CadastroType,
+  DadoAlunoType
 }

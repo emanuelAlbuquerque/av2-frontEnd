@@ -1,6 +1,5 @@
 import { Component } from '@angular/core'
 import { ItemLista } from 'src/types/types'
-import { FormGroup, FormBuilder } from '@angular/forms'
 
 @Component({
   selector: 'app-list-items',

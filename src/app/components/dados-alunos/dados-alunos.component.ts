@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { DadosAlunosService } from 'src/app/services/dados-alunos.service'
+import { DadoAlunoType } from 'src/types/types'
 
 @Component({
   selector: 'app-dados-alunos',
@@ -7,7 +8,7 @@ import { DadosAlunosService } from 'src/app/services/dados-alunos.service'
   styleUrls: ['./dados-alunos.component.scss']
 })
 export class DadosAlunosComponent {
-  public listaDados: any[] = []
+  public listaDados: DadoAlunoType[] = []
 
   constructor(private dadosAlunosService: DadosAlunosService) { }
 
@@ -18,7 +19,6 @@ export class DadosAlunosComponent {
   }
 
   calcularMediaGlobal(rendimentos: Object) {
-    console.log(rendimentos)
     const notas = Object.values(rendimentos)
     const somaNotas = notas.reduce((total, nota) => total + nota, 0)
 

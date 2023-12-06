@@ -28,19 +28,15 @@ export class FormCadastroComponent {
 
   cadastrar(event: Event) {
     const { nome, email, senha } = this.form.value
-
     this.error = this.validarCampos(nome, email, senha)
-
     if (!this.error) {
       this.cadastro = {
         nome,
         email,
         senha
       }
-
       this.form.reset()
     }
-
     event.preventDefault()
   }
 
