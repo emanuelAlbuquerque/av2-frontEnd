@@ -37,7 +37,11 @@ export class FormCadastroComponent {
         email,
         senha
       }
+
+      this.form.reset()
     }
+
+    event.preventDefault()
   }
 
   validarCampos(nome: string, email: string, senha: string) {

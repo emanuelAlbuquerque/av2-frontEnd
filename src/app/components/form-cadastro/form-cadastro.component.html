@@ -1,16 +1,21 @@
-<div class="container">
-  <h1>Exercício 04</h1>
+<div class="card w-50 m-auto p-3">
+  <h4>Exercício 04</h4>
   <div>
-    <form [formGroup]="form" class="form">
+    <form [formGroup]="form" class="form" (submit)="cadastrar($event)">
       <div>
         <input type="text" formControlName="nome" placeholder="Nome:">
         <input type="text" formControlName="email" placeholder="Email:">
         <input type="password" formControlName="senha" placeholder="Senha:">
       </div>
-      <button>
+      <button type="submit">
         Enviar
       </button>
     </form>
-    <p></p>
+    <div>
+      <p *ngIf="error" class="label-error">Olá, informe os campos corretamente.</p>
+      <p *ngIf="!error && cadastro.nome && cadastro.email && cadastro.senha" class="label-sucess">Olá,
+        {{cadastro.nome}}, seu cadastro foi
+        realizado com sucesso.</p>
+    </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
-<div class="container">
-  <h1>Exercício 02 e 03</h1>
+<div class="card w-50 m-auto p-3">
+  <h4>Exercício 02 e 03</h4>
   <div>
-    <ul>
+    <ul class="list">
       <li *ngFor="let item of listItems" [ngStyle]="{'background': item.concluida && 'yellow'}">
         <p>{{ item.nome }}</p>
         <div>
@@ -14,9 +14,7 @@
         </div>
       </li>
     </ul>
-    <form [formGroup]="form" class="container_input">
-      <input id="nome" type="text" formControlName="nome" placeholder="Nome: " maxlength="100">
-      <button (click)="adicionarItem()">Adicionar</button>
-    </form>
+    <input id="nome" type="text" placeholder="Nome: " maxlength="100" [(ngModel)]="addNome">
+    <button (click)="adicionarItem()">Adicionar</button>
   </div>
 </div>

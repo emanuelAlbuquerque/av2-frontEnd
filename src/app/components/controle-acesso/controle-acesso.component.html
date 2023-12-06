@@ -1,0 +1,13 @@
+<div class="card w-50 m-auto p-3">
+  <h4>Exercício 05</h4>
+  <div>
+    <button (click)="permitirAcesso('administrador')">administrador</button>
+    <button (click)="permitirAcesso('colaborador')">colaborador</button>
+    <button (click)="permitirAcesso('usuário')">usuário</button>
+  </div>
+  <div>
+    <p *ngIf="acesso === 'administrador'">Você tem permissão de administrador</p>
+    <p *ngIf="acesso === 'colaborador'">Você tem permissão de colaborador</p>
+    <p *ngIf="acesso === 'usuário'">Você tem permissão de usuário</p>
+  </div>
+</div>

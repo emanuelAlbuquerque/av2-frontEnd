@@ -1,0 +1,23 @@
+<div class="card w-50 m-auto p-3">
+  <h4>Exercicio 08</h4>
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Matrícula</th>
+          <th scope="col">Curso</th>
+          <th scope="col">Média Global</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dado of listaDados">
+          <th>{{dado.nome}}</th>
+          <td>{{dado.matricula}}</td>
+          <td>{{dado.curso}}</td>
+          <td>{{calcularMediaGlobal(dado.rendimentoEscolar)}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

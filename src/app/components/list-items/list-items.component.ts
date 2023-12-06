@@ -15,28 +15,19 @@ export class ListItemsComponent {
     { id: 4, nome: "Feijão", concluida: false },
     { id: 5, nome: "Leite", concluida: false }
   ]
-  public form: FormGroup = {} as FormGroup
-
-  constructor(private formBuilder: FormBuilder) { }
-
-  ngOnInit(): void {
-    this.form = this.formBuilder.group({
-      nome: ['']
-    })
-    // Cria o grupo do formulário com todos os campos que terá dentro do formulário
-  }
+  public addNome: string = ''
 
   adicionarItem() {
-    if (this.form.get('nome')?.value) {
+    if (this.addNome) {
       const updatedList = [...this.listItems, {
         id: this.listItems.length > 0 ? this.listItems?.pop()?.id as number + 1 : 0,
-        nome: this.form.get('nome')?.value,
+        nome: this.addNome,
         concluida: false
       }]
 
       this.listItems = updatedList
 
-      this.form.reset()
+      this.addNome = ''
     }
   }
 

@@ -1,0 +1,17 @@
+<div class="card w-50 m-auto p-3">
+  <h4>Exercício 07</h4>
+  <div *ngIf="! estaAutenticado">
+    <form [formGroup]="form" class="form" (submit)="autenticar($event)">
+      <div>
+        <input type="text" formControlName="email" placeholder="Email:">
+        <input type="password" formControlName="senha" placeholder="Senha:">
+      </div>
+      <button type="submit">
+        Fazer Login
+      </button>
+    </form>
+  </div>
+  <div *ngIf="estaAutenticado">
+    <app-area-logada [email]="cadastro.email" (deslogar)="receberSolicitacao($event)"></app-area-logada>
+  </div>
+</div>
